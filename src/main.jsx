@@ -10,6 +10,7 @@ import AppContext from './context/AppContext.jsx';
 import PrivateRoute from './components/PrivateRoute.jsx';
 import Profile from './components/Profile.jsx';
 import Error from './components/Error.jsx';
+import ServiceDetails from './components/ServiceDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,15 @@ const router = createBrowserRouter([
             <Profile />
           </PrivateRoute>
         )
+      },
+      {
+        path: `/service-details/:id`,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails />
+          </PrivateRoute>
+        ),
+        loader: () => fetch('/services.json')
       }
     ]
   }
