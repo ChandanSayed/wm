@@ -11,6 +11,7 @@ import PrivateRoute from './components/PrivateRoute.jsx';
 import Profile from './components/Profile.jsx';
 import Error from './components/Error.jsx';
 import ServiceDetails from './components/ServiceDetails.jsx';
+import About from './components/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,15 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile />
+          </PrivateRoute>
+        )
+      },
+
+      {
+        path: '/about',
+        element: (
+          <PrivateRoute>
+            <About />
           </PrivateRoute>
         )
       },
