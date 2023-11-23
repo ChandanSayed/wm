@@ -36,6 +36,11 @@ const Header = () => {
           About
         </NavLink>
       </li>
+      <li>
+        <NavLink to={'/login'} className={`${!user ? '' : 'hidden'}`}>
+          Login
+        </NavLink>
+      </li>
     </>
   );
 
