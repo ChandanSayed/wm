@@ -28,7 +28,8 @@ const RegisterForm = () => {
         setSuccess('User registration successful!');
 
         updateProfile(user, {
-          displayName: name
+          displayName: name,
+          photoURL: 'https://www.gstatic.com/webp/gallery/1.webp'
         })
           .then(() => {
             console.log('Profile updated!');

@@ -24,7 +24,7 @@ export default function AppContext({ children }) {
       }
     });
   }, []);
-  return <Context.Provider value={{ user, userPhoto }}>{children}</Context.Provider>;
+  return <Context.Provider value={{ user, userPhoto, setUser, setUserPhoto }}>{children}</Context.Provider>;
 }
 
 // export default AppContext;

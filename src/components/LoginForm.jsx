@@ -1,7 +1,8 @@
 import { FcGoogle } from 'react-icons/fc';
 import app from '../firebase/firebase.init';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { GoogleAuthProvider, getAuth, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
+import { Context } from '../context/AppContext';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -10,6 +11,8 @@ const LoginForm = () => {
   const [success, setSuccess] = useState('');
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
+  const { setUser, setUserPhoto, user } = useContext(Context);
+  console.log(user);
 
   function handleGoogleSignIn() {
     signInWithPopup(auth, provider)
@@ -45,7 +48,8 @@ const LoginForm = () => {
         const user = userCredential.user;
         console.log(user);
         setSuccess('Login successful!');
-        // ...
+        setUser(user.displayName);
+        setUserPhoto(user.photoURL);
       })
       .catch(error => {
         const errorCode = error.code;

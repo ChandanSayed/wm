@@ -1,16 +1,17 @@
 import React, { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, Navigate } from 'react-router-dom';
 import { getAuth, signOut } from 'firebase/auth';
 import app from '../firebase/firebase.init';
 import { Context } from '../context/AppContext';
 
 const Header = () => {
-  const { user, userPhoto } = useContext(Context);
+  const { user, userPhoto, setUser } = useContext(Context);
   const auth = getAuth(app);
   function handleLogout() {
     signOut(auth)
       .then(() => {
-        console.log('Sign-out successful.');
+        setUser('');
+        return <Navigate to={'/'} />;
       })
       .catch(error => {
         console.log(error);
