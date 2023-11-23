@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Bridal Bliss Concierge",
+    "description": "This service specializes in providing comprehensive support to brides, managing everything from vendor coordination to timeline planning and ensuring the bride's stress-free experience on her special day.",
+    "cost": 250,
+    "image": "https://chandansayed.github.io/course-image-links/w1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Venue Visions",
+    "description": "A wedding management company focused on finding unique and personalized venues for couples. They specialize in matching the couple's preferences with stunning locations, handling negotiations, and ensuring the venue aligns perfectly with the wedding theme.",
+    "cost": 350,
+    "image": "https://chandansayed.github.io/course-image-links/w2.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Floral Symphony Co.",
+    "description": "This service excels in floral arrangements and decor, creating breathtaking floral designs that harmonize with the wedding theme and couple's vision, offering a touch of elegance and beauty to the event.",
+    "cost": 200,
+    "image": "https://chandansayed.github.io/course-image-links/w3.webp"
+  },
+  {
+    "id": 4,
+    "title": "Gourmet Gatherings Planner",
+    "description": "A wedding management service that curates bespoke culinary experiences, collaborating with top-tier caterers to craft menus tailored to the couple's preferences, ensuring a delightful gastronomic journey for guests.",
+    "cost": 150,
+    "image": "https://chandansayed.github.io/course-image-links/w4.webp"
+  },
+  {
+    "id": 5,
+    "title": "Tech-Savvy Celebrations",
+    "description": "Specializing in incorporating technology seamlessly into weddings, this management service provides solutions for live streaming, interactive guest experiences, and digital event coordination to enhance and personalize the celebration.",
+    "cost": 270,
+    "image": "https://chandansayed.github.io/course-image-links/w5.webp"
+  },
+  {
+    "id": 6,
+    "title": "Destination Dream weavers",
+    "description": "A wedding management company specializing in planning and organizing destination weddings. They handle all logistics, travel arrangements, and on-site coordination to create a dreamy and stress-free experience for couples and their guests.",
+    "cost": 220,
+    "image": "https://chandansayed.github.io/course-image-links/w6.jpg"
+  }
+]

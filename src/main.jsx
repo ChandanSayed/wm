@@ -7,14 +7,29 @@ import Main from './layout/Main.jsx';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
 import AppContext from './context/AppContext.jsx';
+import PrivateRoute from './components/PrivateRoute.jsx';
+import Profile from './components/Profile.jsx';
+import Error from './components/Error.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Main />,
+    errorElement: <Error />,
     children: [
-      { path: '/', element: <Home /> },
-      { path: '/login', element: <Login /> }
+      { path: '/', element: <Home />, loader: () => fetch('/services.json') },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/profile',
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        )
+      }
     ]
   }
 ]);

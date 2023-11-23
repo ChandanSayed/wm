@@ -4,10 +4,11 @@ import app from '../firebase/firebase.init';
 import LoginForm from './LoginForm';
 import RegisterForm from './RegisterForm';
 import { Context } from '../context/AppContext';
+import { Navigate } from 'react-router-dom';
 
 const Login = () => {
   const { user, userPhoto } = useContext(Context);
-  console.log(user, userPhoto);
+
   const auth = getAuth(app);
   const provider = new GoogleAuthProvider();
   const [login, setLogin] = useState(true);
@@ -50,6 +51,10 @@ const Login = () => {
   function handleForm(e) {
     e.preventDefault();
     setLogin(prev => !prev);
+  }
+
+  if (user) {
+    return <Navigate to="/" replace={true} />;
   }
 
   return (
